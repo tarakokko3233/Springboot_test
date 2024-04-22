@@ -1,0 +1,6 @@
+# .dockerignoreファイル
+.git
+.gradle
+.idea
+*.md
+!build/

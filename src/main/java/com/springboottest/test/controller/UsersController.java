@@ -21,8 +21,4 @@ public List<Users> getUsers() {
     return usersRepository.findAll();
 }
 
-@PostMapping
-public Users createUser(@RequestBody Users users) {
-    return usersRepository.save(users);
-}
 }

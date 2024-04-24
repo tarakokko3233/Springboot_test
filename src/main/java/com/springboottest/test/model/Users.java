@@ -15,7 +15,6 @@ public class Users {
 
     private String email;
 
-    // コンストラクタ、ゲッター、セッターを追加
 
     public void setName(String name) {
         this.name = name;
@@ -25,5 +24,14 @@ public class Users {
         this.email = email;
     }
 
-    // その他のゲッターとセッターも追加
+    public Long getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getEmail() {
+        return email;
+    }
+
 }

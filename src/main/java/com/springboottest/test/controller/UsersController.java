@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/users")
 public class UsersController {
     private final UsersRepository usersRepository;
 
@@ -16,9 +16,14 @@ public UsersController(UsersRepository usersRepository) {
     this.usersRepository = usersRepository;
 }
 
-@GetMapping("/users")
+@GetMapping("/get")
 public List<Users> getUsers() {
     return usersRepository.findAll();
 }
 
+@PostMapping("/create")
+public Users createUser(@RequestBody Users users) {
+    return usersRepository.save(users);
+
+}
 }
